@@ -1,0 +1,15 @@
+Upstream repository: <OFFICIAL_REPO_URL>
+Source commit SHA: <COMMIT_SHA>
+Build date (UTC): <YYYY-MM-DDTHH:MM:SSZ>
+
+Build host:
+- OS: Windows 10/11
+- Architecture: x64
+
+Toolchain:
+- <tool name + version>
+- <runtime/sdk version>
+
+Notes:
+- Third-party build (non-official).
+- Verify package integrity using SHA256SUMS.txt.
