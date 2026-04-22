@@ -1,2 +1,2 @@
-CertUtil:  TopoMobile-2.1.0.apk
-CertUtil:  TopoDesktop-2.1.0.exe
+7319ab220636f7e2fb43b7f4f35f2836df6659f909eec525ae2e5e72aaedd374  TopoMobile-2.1.0.apk
+128fd4dde8403e3d3789b1740323ff5bcd4efb10114f3165d6ad9c214321018f  TopoDesktop-2.1.0.exe
