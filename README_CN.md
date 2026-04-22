@@ -10,16 +10,16 @@
 
 ## 包含文件
 
-- `TopoClaw-2.1.0.apk`（移动端/Android 安装包）
-- `TopoClaw-2.1.0.exe`（桌面端/Windows 安装程序）
+- `TopoMobile-2.1.0.apk`（移动端/Android 安装包）
+- `TopoDesktop-2.1.0.exe`（桌面端/Windows 安装程序）
 - `SHA256SUMS.txt`（用于完整性校验的哈希列表）
 
 ## 下载
 
 请从 Release 资源中下载安装包文件：
 
-- `TopoClaw-2.1.0.apk`
-- `TopoClaw-2.1.0.exe`
+- `TopoMobile-2.1.0.apk`
+- `TopoDesktop-2.1.0.exe`
 
 ## 校验（可选但推荐）
 
@@ -32,15 +32,15 @@
 ### Windows（PowerShell）校验
 
 ```powershell
-Get-FileHash ".\TopoClaw-2.1.0.exe" -Algorithm SHA256
-Get-FileHash ".\TopoClaw-2.1.0.apk" -Algorithm SHA256
+Get-FileHash ".\TopoDesktop-2.1.0.exe" -Algorithm SHA256
+Get-FileHash ".\TopoMobile-2.1.0.apk" -Algorithm SHA256
 ```
 
 ### macOS/Linux 校验
 
 ```bash
-sha256sum TopoClaw-2.1.0.exe
-sha256sum TopoClaw-2.1.0.apk
+sha256sum TopoDesktop-2.1.0.exe
+sha256sum TopoMobile-2.1.0.apk
 ```
 
 ## 为什么要提供校验值
@@ -49,4 +49,25 @@ sha256sum TopoClaw-2.1.0.apk
 
 - 文件完整（未损坏），以及
 - 文件在发布后未被篡改。
+
+## 应用更新与鉴权建议
+
+一般情况下，在同签名、同包名/同安装路径下进行覆盖安装，通常不需要重新鉴权。
+但如果你希望采用更稳妥的保守策略，建议在升级后主动重新鉴权一次，避免因历史会话、设备绑定或服务端缓存导致连接异常。
+
+### 何时建议重新鉴权
+
+- 升级后出现连接失败、扫码绑定失败或会话不可用
+- Android 安装包签名发生变化
+- Windows 端迁移了用户目录、重装系统或清理了应用数据
+- 中转服务（`customer_service`）的鉴权策略或配置有变更
+
+### 保守流程（推荐）
+
+1. 先备份关键配置（如服务地址、模型配置项）。
+2. 覆盖安装新版本（Android 与 Windows 端）。
+3. 在电脑端退出当前登录态并清理旧绑定（若界面支持解绑，优先使用解绑）。
+4. 在手机端重新扫码绑定电脑端二维码，建立新会话。
+5. 重新填写并确认中转服务地址可连通。
+6. 做一次端到端验证（发起一条实际任务，确认请求与返回均正常）。
 

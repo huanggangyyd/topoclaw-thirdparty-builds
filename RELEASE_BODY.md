@@ -6,8 +6,8 @@ Third-party build (non-official).
 - Checksums: see `SHA256SUMS.txt`
 
 Assets:
-- `TopoClaw-2.1.0.apk`
-- `TopoClaw-2.1.0.exe`
+- `TopoMobile-2.1.0.apk`
+- `TopoDesktop-2.1.0.exe`
 - `SHA256SUMS.txt`
 
 Disclaimer:
